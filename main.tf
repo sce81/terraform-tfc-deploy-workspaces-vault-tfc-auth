@@ -1,6 +1,5 @@
 module "TFE_Workspace_Vault_Auth_Projects" {
   for_each = local.workspace_vars.project_auth_vars
-  //source   = "/Users/simon.elliott/Documents/Code/New_Structure/Terraform_Modules/TFE/terraform-module-tfc-workspace-management"
   source        = "app.terraform.io/HashiCorp_AWS_Org/workspace-management/tfe"
   version       = "4.0.1"
   name          = "hcp_workspace_vault_provider_auth_${each.key}"
